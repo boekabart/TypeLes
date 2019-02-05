@@ -12,7 +12,7 @@ namespace TypeLes
         public string Zin
         {
             get => _zin;
-            set => _zin = value.Replace(Environment.NewLine, " ").Trim();
+            set => _zin = value.Replace('\r', ' ').Replace('\n', ' ').Replace("  ", " ").Trim();
         }
         
         public int LesNr { get; set; }
@@ -154,7 +154,6 @@ Woorden per minuut: {wpm}
                 if (klaar)
                     break;
 
-                Console.Clear();
                 OefeningRenderer.Render(voorbeeld, feedback, Console.WindowWidth).ToScreen();
 
                 var key = Console.ReadKey(true);
@@ -162,6 +161,7 @@ Woorden per minuut: {wpm}
                 {
                     if (VraagEchtAfsluiten())
                         return null;
+                    Console.Clear();
                     continue;
                 }
 

@@ -126,7 +126,7 @@ namespace TypeLes
                 {
                     yield return () => Console.SetCursorPosition(pos, row * 3 + 1);
                     var starredWord = typedWords[word2];
-                    yield return () => Console.Write(starredWord);
+                    yield return () => Console.Write(starredWord.Replace('·', ' '));
                     if (starredWord.EndsWith('·'))
                     {
                         inputRow = row;
