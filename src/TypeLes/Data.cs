@@ -116,6 +116,17 @@ ja daal kaal dalk slak s dada; s;aaf klak flak kalk laad kkdd aasd kllj asdf ska
 aaj ddk jaals sjaal las slak aaf ddas ds ffj ddas ds ffj ffk aal aaa ssd ssf ssj
 "
             },
+            new Oefening
+            {
+                LesNr = 1,
+                DagNr = 5,
+                OefeningNr = 10,
+                Zin = @"
+s;fj dka; ;asl fjkdls;a kd;a sl;a dfk; ;asskdjf fj; sa kkl; l; sa l; da l; jdaf
+a; sl dk fj j;as l a;ld dk dka ;l sd a; fs fd fdsa dkdl; fkd asld sl dl f j;as
+l a;ld asd; l; l;lk ;asdldjfdfk; s;fj dka; lasl fj j;as l a;ld
+"
+            },
 /*
             new Oefening
             {
