@@ -144,16 +144,19 @@ daaffadklalslaksja;kalskaasdasjasjalasdfjklalsasdfklalalskaffd;dja;sakkaks
 kaasdaffaalsassl;kkalkaakslsdaas
 "
             },
-/*
+
             new Oefening
             {
-                LesNr = 2, DagNr = 1, OefeningNr = 1,
-                Zin =
-                    @"rfrf frfr frrf rrff rfrf juju juuj juuj frju ujfr rfuj rfuj rfrj ujuf rfuj rfuj rfrj ujuf rfju frju
-rfuj rfuj rfrj ujuf rfuj ffjr fjuj fjru rfuj fjru jjuu frrf juuj rfuj frfj jujr frju
-ujfr rfuj rfuj fjrf jfrj ujfr rfju rfju rfuj juuj frrf ujju rfuj rfuj fjru jjuu frrf juuj
-rfrj ujuf rfuj fjrf fjuf"
-            }*/
+                LesNr = 2,
+                DagNr = 1,
+                OefeningNr = 1,
+                Zin = @"
+rfrf frfr frrf rrff rfrf juju juuj juuj frju ujfr rfuj rfuj rfrj ujuf rfuj rfuj rfrj ujuf rfju frju
+rfuj rfuj rfrj ujuf rfuj ffjr fjuj fjru rfrf fjru rfuj fjru jjuu frrf juuj rfuj rfuj frfj jujr frju
+ujfr rfuj rfuj fjrf jfrj ujfr rfju rfju rfuj juuj frrf ujju rfuj rfuj fjru rfuj fjru jjuu frrf juuj
+rfrj ujuf rfuj fjrf fjuf
+"
+            },
         };
     }
 }
