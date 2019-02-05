@@ -64,6 +64,20 @@ ffkd ffkd dfdf dfd dfd dfdf kd dk kd sdf jkl lkj sdf fds jkl fjdk fjfj sdfjkl lk
 jd jdd ddj kd kd kd kd
 "
             },
+            new Oefening
+            {
+                LesNr = 1,
+                DagNr = 3,
+                OefeningNr = 6,
+                Zin = @"
+s l k j f d s s d f j k l l d d f j k l s d f j k l l k j f d s l k j f d s l k j f d s s d f j k l l d j f
+j k l ssd ssj ssk ssl kkd kkf ddf ddj ddk ssl ffs kkl lls lld llf llj llk lll ddf ddf sdf sdf s f k
+d k k jjs jjd jjf jjk jkkl fds lkj ssf llf llj llk ddd
+dds ddf ddj ddk ssl ffs ffd ffj ffk ffl jjs jjd jjf jjk jjk kks
+d f l k k k l f d f s d s d f s j s k s k s l d l f j s kl l f d dd l f j s sdf jkkl fds lkj ssf ssk
+ssl lls lld llf llj llk ddd ddf ddk dd ll df jk kk sd fd kl fd sj ssd ssj
+"
+            },
 /*
             new Oefening
             {
