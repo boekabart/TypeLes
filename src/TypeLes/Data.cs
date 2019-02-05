@@ -78,6 +78,17 @@ d f l k k k l f d f s d s d f s j s k s k s l d l f j s kl l f d dd l f j s sdf 
 ssl lls lld llf llj llk ddd ddf ddk dd ll df jk kk sd fd kl fd sj ssd ssj
 "
             },
+            new Oefening
+            {
+                LesNr = 1,
+                DagNr = 4,
+                OefeningNr = 7,
+                Zin = @"
+;a;a ;a aa;a ;aa a; ;a;a ;;a; ;aa; ;aa; ;aa; aa;a ;a;a ;a;a aa;a ;aa; aa;a aa;a ;aa
+;aa; aa;a ;a;a ;aa; ;a;a aa;; ;aa; ;a;a ;;a; ;aa; ;aa; aa;a aa;a ;aa ;aa; ;aa; ;aa;
+aa;a ;a;a ;aa; ;a;a ;aa; aa;a ;a;a aa;a ;aa; a;a; ;aa; a;aa ;aa; aa;a ;aa; aa;a
+"
+            },
 /*
             new Oefening
             {
