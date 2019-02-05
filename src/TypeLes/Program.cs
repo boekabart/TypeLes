@@ -12,7 +12,7 @@ namespace TypeLes
         public string Zin
         {
             get => _zin;
-            set => _zin = value.Replace("\r\n", " ").Trim();
+            set => _zin = value.Replace(Environment.NewLine, " ").Trim();
         }
         
         public int LesNr { get; set; }
