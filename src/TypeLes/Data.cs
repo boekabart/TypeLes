@@ -127,6 +127,23 @@ a; sl dk fj j;as l a;ld dk dka ;l sd a; fs fd fdsa dkdl; fkd asld sl dl f j;as
 l a;ld asd; l; l;lk ;asdldjfdfk; s;fj dka; lasl fj j;as l a;ld
 "
             },
+            new Oefening
+            {
+                LesNr = 1,
+                DagNr = 6,
+                OefeningNr = 11,
+                Zin = @"
+daf s;s slak sas sl;k asdf jkl; as aal kaf d; ja ;s dal slak ala als af da als ;l jaak das
+kaas af da da ad aal aak aas kas k;k af da da ad aal aak aas al als af as aal aks akal
+kalk dak sl;k laf slak slaaf kalk klaas slak sl;k slaaf klas ad klad daad k;k lak als ;l
+jaak das kaas sas laks aks als ;l daad las klas ja jaffa jas kas kassa kaas s;s slak sas
+sl;k kalk aas kaf k;f kas k;k k;l kaf k;k k;k kas k;k af da da ad aal aak aas al als af
+as aal aks akal kalk dak lal l;f las l;s laf l;k lal l;f las laak laks jaffa al da lal al ;l daf
+kaal ;fkdksja ;lkj klaas slaaf kalk daad jaffa kassa ja kfdsajl; fjsldk
+daaffadklalslaksja;kalskaasdasjasjalasdfjklalsasdfklalalskaffd;dja;sakkaks
+kaasdaffaalsassl;kkalkaakslsdaas
+"
+            },
 /*
             new Oefening
             {
