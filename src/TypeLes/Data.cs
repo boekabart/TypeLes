@@ -157,6 +157,17 @@ ujfr rfuj rfuj fjrf jfrj ujfr rfju rfju rfuj juuj frrf ujju rfuj rfuj fjru rfuj 
 rfrj ujuf rfuj fjrf fjuf
 "
             },
+            new Oefening
+            {
+                LesNr = 2,
+                DagNr = 1,
+                OefeningNr = 2,
+                Zin = @"
+fttf fttf fttf ftft tftf ttff jyuyj jyjy yjyj jyyj jyyj jyjy ftft tfyj jyjt tyyj jyyj yjyj tfjyjyjy ttff
+yyjj tftf yjyj jyjy ftft yjyj yjyj fjtf jyjf tftf yjyj yjyj fttf tfft jyjy tfft fttf tftf yjjy fjyt tyty
+tyty fttf jyjy yjyj jyjt tfyj
+"
+            },
         };
     }
 }
