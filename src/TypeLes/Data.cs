@@ -39,6 +39,18 @@ fdjk ddjj djdj fkfk ffdd ddff jjkk kkjj ddff fdfd jkjk fddf kjkj jkjk kkdd dkdk 
 fjfj fdff dfjk dkdk fddf kjkj kkjk ddff
 "
             },
+            new Oefening
+            {
+                LesNr = 1,
+                DagNr = 2,
+                OefeningNr = 4,
+                Zin = @"
+llls ssls llsl ssll ssls lsll sssl lsls llss llss lsls lsll sssl slsl ssls lssl slsl ssll slsl slsl ssll ssll
+llss llss slsl llsl ssls lsls llsl slls lssl llss slsl ssll slsl ssll lsls slll lssl slsl llss llls ssls llsl
+ssll ssls lsll sssl lsls llss llss lsls slsl llss llss llls sssl lssl lsls lssl slll ssll llsl ssll ssll ssll
+slsl slsl ssll ssll lssl slsl ssll slsl slsl llss
+"
+            },
 /*
             new Oefening
             {
