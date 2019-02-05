@@ -103,6 +103,19 @@ ka daal ala al da kaal dalk slak s dadal slaaf jaals kl kkdd aasd kllj asdf skaa
 las slak dadal slaaf klas flak kalk kaad
 "
             },
+            new Oefening
+            {
+                LesNr = 1,
+                DagNr = 5,
+                OefeningNr = 9,
+                Zin = @"
+a s f j k l l k j d d f j k l l l k j d s a s d f j k l f as df jk la as la df ssa dds da al da jk
+la al kj fd ds sa as df jk la lk jf da as aas aad aaf ddas ds ffj ffk aaj aak aal aaa aad
+aaf aaj aak ffl jja jja ffs ffd kjjk jjl ddk al af ssa dds kkj kkf a ja ka la as af al da la ka
+ja daal kaal dalk slak s dada; s;aaf klak flak kalk laad kkdd aasd kllj asdf skaal aaf
+aaj ddk jaals sjaal las slak aaf ddas ds ffj ddas ds ffj ffk aal aaa ssd ssf ssj
+"
+            },
 /*
             new Oefening
             {
