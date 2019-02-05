@@ -1,11 +1,12 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <!-- BUILD -->
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <OutputType>Exe</OutputType>
     <IsPackable>false</IsPackable>
     <RelativePublishBinDir>bin</RelativePublishBinDir>
+    <RuntimeIdentifiers>osx.10.12-x64,win10-x64</RuntimeIdentifiers>
   </PropertyGroup>
   <!-- *SPECIFICS* -->
   <PropertyGroup>

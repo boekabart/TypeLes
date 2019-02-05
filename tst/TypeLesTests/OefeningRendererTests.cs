@@ -101,14 +101,14 @@ namespace TypeLesTests
         [Fact]
         public void TestX()
         {
-            var (vb, fb, klaar) = OefeningRenderer.LiveFeedback(Program.Oefeningen[0].Zin, Program.Oefeningen[0].Zin);
+            var (vb, fb, klaar) = OefeningRenderer.LiveFeedback(Data.Oefeningen[0].Zin, Data.Oefeningen[0].Zin);
             klaar.Should().BeTrue();
         }
 
         [Fact]
         public void TestX1()
         {
-            var (vb, fb, klaar) = OefeningRenderer.LiveFeedback(Program.Oefeningen[0].Zin, Program.Oefeningen[0].Zin.Substring(0, Program.Oefeningen[0].Zin.Length-4));
+            var (vb, fb, klaar) = OefeningRenderer.LiveFeedback(Data.Oefeningen[0].Zin, Data.Oefeningen[0].Zin.Substring(0, Data.Oefeningen[0].Zin.Length-4));
             klaar.Should().BeFalse();
         }
 
