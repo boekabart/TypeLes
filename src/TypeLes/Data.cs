@@ -89,6 +89,20 @@ ssl lls lld llf llj llk ddd ddf ddk dd ll df jk kk sd fd kl fd sj ssd ssj
 aa;a ;a;a ;aa; ;a;a ;aa; aa;a ;a;a aa;a ;aa; a;a; ;aa; a;aa ;aa; aa;a ;aa; aa;a
 "
             },
+            new Oefening
+            {
+                LesNr = 1,
+                DagNr = 4,
+                OefeningNr = 8,
+                Zin = @"
+a f j k l l k s d f j k l a s d f j k j d s a s d l l k j d f j k l f as df jk ds sa as df la as df
+jk la kj fd jk ka lk jfjda ass aak aad aaf la aal aaa as aaf aad aaf aaj aaj aak aal aaa
+ssd ssf ssj ssk ssl dda ddas ds ffj ffk ssa aas ddj ddk ffk ffk ffs ffa ffk ffk dds kkj kkf a
+ja jja ffs ffd jjk jjk ddk ssa ka la da af ak al af al kaa kllj asdf skaal sa sjaal ja ka ja
+ka daal ala al da kaal dalk slak s dadal slaaf jaals kl kkdd aasd kllj asdf skaal sa sjaal
+las slak dadal slaaf klas flak kalk kaad
+"
+            },
 /*
             new Oefening
             {
