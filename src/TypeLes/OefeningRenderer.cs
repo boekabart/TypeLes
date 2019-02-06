@@ -69,7 +69,8 @@ namespace TypeLes
                 for (; wordNo < words.Length; wordNo++)
                 {
                     var currentWord = words[wordNo].Replace("*", "");
-                    if (pos + 1 +todo.Length + currentWord.Length > consoleWidth)
+                    // Don't allow words to touch the right edge, as there would be no space for the cursor left!
+                    if (pos + 1 +todo.Length + currentWord.Length >= consoleWidth)
                         break;
                     if (words[wordNo].StartsWith('*'))
                     {
