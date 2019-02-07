@@ -239,6 +239,22 @@ dag gas gar gaas jars haat hat hyt hyr daar guur guut guyt haar haat had laat la
 larf alus gaar gas faalt falt gaas klaas raaf raas dras kraak taart tas kas duf dyf dus
 "
             },
+            new Oefening
+            {
+                LesNr = 2,
+                DagNr = 5,
+                OefeningNr = 9,
+                Zin = @"
+juf suf rus jus ylt tsk ysf taf talf d;k asa l;f drad lak aal as ;s af las d;l sas l;f da; jak dal aas lal guur
+guut gaas dat glad gala gas tak jus kaart klaar t;k t; t;f tsk ysf gaaf jars haar haar jaar gaar raf
+hars graf sla kast dad durf slurf hals dad glad kassa huur gluur rug kaas af klaar kaars huls kus
+raar klaar glashalf kruk slurf klaas raaf raas gaaf drad kraak taart tas kas uur duf dyf dus juf
+suf rus jus ylt tyl syl rast tast taart kul kyl kul jys dus dys aus ayut lad duf jus tak taak tal taal tuk
+t;k t; t;f tsk ysf taf talf haar haast had laat gat gaaf hlaf dalf faalt falt gaas gar guur guut gut dag
+gas hat hyt hyr daar daat daat dat glad gala gas gal taal tas taak tas klaar talft taf al la las aks
+taak gaar jars haar las larf adus sul slurf slaar
+"
+            },
         };
     }
 }
