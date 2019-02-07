@@ -212,6 +212,19 @@ ggff gfhj gfhj gfgf hjhj jhgf gfjh jhgf hjgf ffhh jjgg gfjh hjgf hjhf hghg hghg 
 jhgf gfjh jhgf fgfg hjhj gfgf ggff hjgf hjgf ffhh ghgh ffgg hhjj hgjj ghhj
 "
             },
+            new Oefening
+            {
+                LesNr = 2,
+                DagNr = 3,
+                OefeningNr = 7,
+                Zin = @"
+ghkd ;asl ghjf ;agh kdls fjkd ;afj ghjf ;agh ghkd ;asl ghjf gjfhfj kdls g; d; klaag jgkd
+hldj hals gul klaag gl; gul l;d gaf h; g; d; klaag jgkd hldj haak ;agh klds a l f l g s j l
+f l g s h k d l g f s f l h j ; h f a j k l f l f h ; r t u f y t u y r fda ;kl sak l;a kfj s;a dls
+jka l f h ; fdj kdd fsa s;a dja dak jl; kdd fsa ;kl fdj la d; ja klas ;s gras half gul gaar
+gal rug durf huur haar klas glas dras kaars half
+"
+            },
         };
     }
 }
