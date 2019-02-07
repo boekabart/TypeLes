@@ -255,6 +255,22 @@ gas hat hyt hyr daar daat daat dat glad gala gas gal taal tas taak tas klaar tal
 taak gaar jars haar las larf adus sul slurf slaar
 "
             },
+            new Oefening
+            {
+                LesNr = 2,
+                DagNr = 6,
+                OefeningNr = 10,
+                Zin = @"
+aak aal aaa aad kaf sas l;k lak al ;s as dak; a s d f j k l a s d f j k l l k j fd s a s d f j k
+l f as d;f jk ;s aa; ka la as df jk la al kj f;d ds sa as df jk la lk fg da as aas aad ddj
+ddk dda aaf aaj aak aal aaa aad ;aaf aaj aak aal aaa d;ds ssf ssj ssk ssl ssa aas ddj
+ddk ddl dda ddas dds ffj ffk ffl ffs ffa ffk ffk; jja ffs ffd jjk jjl ddk ssa dds kkj kkf a ja
+ak af as af al da; la ka ja ka ja ka daal kaaa ; dalk slak dadal slaaf jaals sjaallas slak
+klak f;lak akl laad kkdd aasd kllj asdf skaal dadal ja ka la da af ag sa as af al da la ka
+ja ka ;la da al af jaas jars huur guur duf hars duf dart trad truus dal duf; daag dag
+dras dra trak tak trak kl;as kras kru k;k kuks kyks f a a l d k k u ; s
+"
+            },
         };
     }
 }
