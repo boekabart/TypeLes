@@ -168,6 +168,28 @@ yyjj tftf yjyj jyjy ftft yjyj yjyj fjtf jyjf tftf yjyj yjyj fttf tfft jyjy tfft 
 tyty fttf jyjy yjyj jyjt tfyj
 "
             },
+            new Oefening
+            {
+                LesNr = 2,
+                DagNr = 2,
+                OefeningNr = 3,
+                Zin = @"
+ys yrt tra als sla yjas yjldsf aatk jys fusy atrf kaart taart yk kyks yls yjas uytrfd
+sdfjkl asdfjkl jys fusy  atrf atrtf yujds uytrfd ;s ys yrt tra als taart stuur yjdf
+taak aatk jys
+"
+            },
+            new Oefening
+            {
+                LesNr = 2,
+                DagNr = 2,
+                OefeningNr = 4,
+                Zin = @"
+fdkj jksa lkl lkl lsl kada laka dalsa jssj lsal as sdfds sfs klad klad lkl lkl lsl faja kada
+dk;a dka; lsal sdjk kjkdjk sdkjk k;as jksa klad klad lkl lkl kda las a; k;as dalsa jksa
+klad klad kda las
+"
+            },
         };
     }
 }
