@@ -10,8 +10,11 @@
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <!-- *REF NUGET PACKAGES* -->
+  <ItemGroup>
+  </ItemGroup>
   <!-- *REF PROJECTS* -->
   <ItemGroup>
+    <ProjectReference Include="..\..\src\TypeLes\TypeLes.csproj" />
   </ItemGroup>
   <!-- *EMBEDDED RESOURCES* -->
   <ItemGroup>
@@ -19,8 +22,5 @@
   <!-- EMBED SOURCES -->
   <ItemGroup>
     <EmbeddedFiles Include="@(Compile)" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\TypeLes\TypeLes.csproj" />
   </ItemGroup>
 </Project>
