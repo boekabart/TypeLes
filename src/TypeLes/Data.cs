@@ -225,6 +225,20 @@ jka l f h ; fdj kdd fsa s;a dja dak jl; kdd fsa ;kl fdj la d; ja klas ;s gras ha
 gal rug durf huur haar klas glas dras kaars half
 "
             },
+            new Oefening
+            {
+                LesNr = 2,
+                DagNr = 4,
+                OefeningNr = 8,
+                Zin = @"
+das durf slurf graf sla kast dad klad kassa huur gluur rug raaf klus gul gul klaar
+kaars huis kus klaas raaf raas gaaf raaf raas gaaf dras kraak af fars klus gul klaar
+kast das kaars huls kus klaar suf rus jus kruk slurf ylt tyl syl tast tast dus juf suf rus
+jus ylt ky kul jys dus dys aus ayut lus duf jus tak tal taal t;k t; t;d taf had laat gat
+dag gas gar gaas jars haat hat hyt hyr daar guur guut guyt haar haat had laat las
+larf alus gaar gas faalt falt gaas klaas raaf raas dras kraak taart tas kas duf dyf dus
+"
+            },
         };
     }
 }
