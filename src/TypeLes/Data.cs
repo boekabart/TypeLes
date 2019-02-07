@@ -190,6 +190,17 @@ dk;a dka; lsal sdjk kjkdjk sdkjk k;as jksa klad klad lkl lkl kda las a; k;as dal
 klad klad kda las
 "
             },
+            new Oefening
+            {
+                LesNr = 2,
+                DagNr = 2,
+                OefeningNr = 5,
+                Zin = @"
+luds kus kus krul kuul kaal laak slak klas klak kruk kruk dus dus klas klaas last salsa
+l;st laat daf das dak laak kaal luks lurs lus kus laat daad sla kat fust lada das luk lus
+jas jast kat lak dak jus rustj rus kruk kruk dus kast jas jsat daf slak klas klas dassa
+"
+            },
         };
     }
 }
