@@ -201,6 +201,17 @@ l;st laat daf das dak laak kaal luks lurs lus kus laat daad sla kat fust lada da
 jas jast kat lak dak jus rustj rus kruk kruk dus kast jas jsat daf slak klas klas dassa
 "
             },
+            new Oefening
+            {
+                LesNr = 2,
+                DagNr = 3,
+                OefeningNr = 6,
+                Zin = @"
+gffg gfgf hhjj jhjh gfgf hhjj hghg hhjj jhjh jhjh jjff ggff fgfg gfhj gfhj ghgh ffgg hhjj
+ggff gfhj gfhj gfgf hjhj jhgf gfjh jhgf hjgf ffhh jjgg gfjh hjgf hjhf hghg hghg gfgf hjhj
+jhgf gfjh jhgf fgfg hjhj gfgf ggff hjgf hjgf ffhh ghgh ffgg hhjj hgjj ghhj
+"
+            },
         };
     }
 }
