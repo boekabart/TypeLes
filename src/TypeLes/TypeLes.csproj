@@ -6,7 +6,7 @@
     <OutputType>Exe</OutputType>
     <IsPackable>false</IsPackable>
     <RelativePublishBinDir>bin</RelativePublishBinDir>
-    <RuntimeIdentifiers>osx.10.12-x64,win10-x64</RuntimeIdentifiers>
+    <RuntimeIdentifiers>osx-x64,win-x64</RuntimeIdentifiers>
   </PropertyGroup>
   <!-- *SPECIFICS* -->
   <PropertyGroup>
