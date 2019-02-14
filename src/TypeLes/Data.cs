@@ -322,6 +322,17 @@ liefs diffe eikel effik des sde eds hef daar dat klad klaar dal klef klaas laart
 als deed klad klik aai daar gier klad kilk teder taal tas klik salsa tred
 "
             },
+            new Oefening
+            {
+                LesNr = 3,
+                DagNr = 2,
+                OefeningNr = 5,
+                Zin = @"
+aqa aqa qaqa aqa aqqa qaua qauaequer iquaq aquil auitte aqara
+quitte qaua quara aqua quadrille queue quair qaua qaie qeur aqua
+qeuq aqua quadrille aueie quair quer aqua quelle aqa
+"
+            },
         };
     }
 }
