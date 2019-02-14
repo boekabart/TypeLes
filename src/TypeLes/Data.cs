@@ -2,7 +2,7 @@ namespace TypeLes
 {
     public static class Data
     {
-        public static Oefening[] Oefeningen = 
+        public static Oefening[] Oefeningen =
         {
             new Oefening
             {
@@ -291,6 +291,20 @@ deel del ede deel del des deed
 klis kil stil kilte lik tik dit klik dit dik dikker dikste iel
 dikker distel disteltje kikkers kikkertje klik dit kilte
 dirk kist kei keitje dief diefje eik kit lei leitje tier teil gier
+"
+            },
+            new Oefening
+            {
+                LesNr = 3,
+                DagNr = 1,
+                OefeningNr = 3,
+                Zin = @"
+fed fjed eds ges ded sde sde aed aed sed jed sed ded gedjf hjefd hef ejked hef eded
+sded klej hegd klef hef edflef dedf kjed
+klef jesg klefjg a f j k i s d e f j s d e f k d e f j k i l l i
+k j s a d e i as e f d s de fj ki la sd ik ki jk kf fe ds ad ei
+ae si di ke fi asd efj kil asd efj kel lik fge dsa lik jfe das
+aae lle die a e f e j e s e f l e a e j e k e l e i d i f i l i f i
 "
             },
         };
