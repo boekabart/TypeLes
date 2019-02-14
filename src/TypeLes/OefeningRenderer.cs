@@ -54,7 +54,7 @@ namespace TypeLes
 
             return (vb, fb, klaar);
         }
-
+            
         public static (string Voorbeeld, string Feedback, int FouteWoorden) FinalFeedback(string voorbeeld, string feedback)
         {
             var words = Words(voorbeeld);

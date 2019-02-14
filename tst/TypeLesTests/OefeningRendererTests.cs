@@ -1,6 +1,7 @@
 using FluentAssertions;
 using TypeLes;
 using Xunit;
+using Xunit.Sdk;
 
 namespace TypeLesTests
 {
@@ -186,6 +187,17 @@ alsjd as sala");
 *alsjd* as sala");
             fb.Should().Be(@"**** *** ****⏎
 ");
+            klaar.Should().BeFalse();
+        }
+
+        [Fact(Skip = "Lastig")]
+        public void TestZinnen7()
+        {
+            var (vb, fb, klaar) = OefeningRenderer.LiveFeedback(OefZinnen, @"abcd def
+ghu");
+            vb.Should().Be(@"abcd def *ghus⏎*
+alsjd as sala");
+            fb.Should().Be(@"**** ***⏎***");
             klaar.Should().BeFalse();
         }
 
