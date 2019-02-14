@@ -307,6 +307,21 @@ ae si di ke fi asd efj kil asd efj kel lik fge dsa lik jfe das
 aae lle die a e f e j e s e f l e a e j e k e l e i d i f i l i f i
 "
             },
+            new Oefening
+            {
+                LesNr = 3,
+                DagNr = 2,
+                OefeningNr = 4,
+                Zin = @"
+jk li de je si se le is ef ik ae je ea si se le
+ik li fe de ki si eis die fe de lek ijs lei lid sik les lief slik kles
+fie lis jij eil kei ida jes klef dief saai lief
+slik kles kijf deel slak fles kleed klief sjiek
+liefs deels asse lijks skjil des sde
+liefs diffe eikel effik des sde eds hef daar dat klad klaar dal klef klaas laart fles das
+als deed klad klik aai daar gier klad kilk teder taal tas klik salsa tred
+"
+            },
         };
     }
 }
