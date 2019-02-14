@@ -344,6 +344,17 @@ wiel wees waas wsws swsw wees waas waard wies wijs water wat wed waak wakker
 wedde willetje wal waarde watje waar wild wat waar
 "
             },
+            new Oefening
+            {
+                LesNr = 3,
+                DagNr = 3,
+                OefeningNr = 7,
+                Zin = @"
+koffer doel dok los lot kik dof roel roos rook rol doel oester doos rood offer tolk roe
+doos oor roffel oortje door droog lood rollade loda ros of olie oor ros dooi ooit oortje
+rood
+"
+            },
         };
     }
 }
