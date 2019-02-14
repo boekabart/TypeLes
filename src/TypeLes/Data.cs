@@ -400,7 +400,7 @@ grap hulp slap hout hels tres kruk klad jeuk hoog leep grap poet klas deel kijf
             new Oefening
             {
                 LesNr = 3,
-                DagNr = 4,
+                DagNr = 5,
                 OefeningNr = 11,
                 Zin = @"
 leder draaidoos heilrijk kijkers dokter ark klier uil joker werf gelig wreef wol oker
