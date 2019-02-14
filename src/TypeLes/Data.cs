@@ -282,6 +282,17 @@ seek teek keet kede deels delf dek de des deed eed dele dede tleet eekt eed eeld
 deel del ede deel del des deed
 "
             },
+            new Oefening
+            {
+                LesNr = 3,
+                DagNr = 1,
+                OefeningNr = 2,
+                Zin = @"
+klis kil stil kilte lik tik dit klik dit dik dikker dikste iel
+dikker distel disteltje kikkers kikkertje klik dit kilte
+dirk kist kei keitje dief diefje eik kit lei leitje tier teil gier
+"
+            },
         };
     }
 }
