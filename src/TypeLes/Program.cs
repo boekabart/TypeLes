@@ -121,10 +121,10 @@ Woorden per minuut: {wpm}
                 .ThenBy(x => x.OefeningNr)
                 .ToList();
 
-            var list2 = AddDoneCounts(list, persoon);
+            var list2 = AddDoneCounts(list, persoon).ToList();
 
             var doneCount = list2.TakeWhile(x => x.DoneCount != 0).Count();
-            var options = list2.Take(doneCount + 1).ToList();
+            var options = persoon == "Papa"?list2:list2.Take(doneCount + 1).ToList();
             var choice = VraagKeuze(options.Select(o =>
                     $"Les {o.Oefening.LesNr}; Dag {o.Oefening.DagNr} ({o.Oefening.DagNaam}); Oefening {o.Oefening.OefeningNr} - {o.DoneCount} keer gemaakt")
                 .ToArray());
