@@ -414,6 +414,23 @@ soldaat huis iedere kreeg allerlei herrie helde huisje af trouw luier wrok heer 
 huur raar jas hoogst day werk yes klaar
 "
             },
+            new Oefening
+            {
+                LesNr = 3,
+                DagNr = 6,
+                OefeningNr = 12,
+                Zin = @"
+hotel werf gelig wreef wol oker rode hotel wrok heer tre harder huilerig hart roef roe
+hij had hik kijkers huis huishuur heg soldaat hoogte lood goud wald huis jager kraag
+lauwe klauw woud koers sfeer groes dokter hoogtij holte draaidoos klokhuis rollade
+woud koers sfeer wreef kluis sloot draf af trouw luier flauw yellow heilrijk hart hiel
+hoofdstuk hooi rollade kluis sloot draf af trouw luier flauw day werk yes roef roe hij
+had poster paar pier dokter spier speer wal wiel paar pier spier past het redel kar
+klier uil klauw yellow hoogst huis de dokter het hoofd de kijkers de post het oor de
+aap herrie soldaat gekrulde kijkers dokter post het wiegje het hart de holte klokhuis
+wreef wol oker kreeg allerlei
+"
+            },
         };
     }
 }
