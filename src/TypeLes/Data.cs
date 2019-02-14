@@ -381,6 +381,22 @@ al dat geklaag door die gladheid
 de typiste typt haar werk foutloos
 "
             },
+            new Oefening
+            {
+                LesNr = 3,
+                DagNr = 4,
+                OefeningNr = 10,
+                Zin = @"
+klas laad kalf klad kles lief kaau fles lijf deel lief kaau dief klef klef hijg haai hale lege
+hals hurk hoog leep grap hulp pest poes past hale lege hals jurk doet trap krol werd
+luid egel edah past pest poes werp peer past krat doet trap klol werd luid egel edah
+huop klop peer piet gras jeuk hoog leep grap hulp slag hout hels tres kruk klad wrok
+slop poet klas deel kijf kles lief hoog leep grap hulp krat doet trap krol werd luid egel
+edah huop klop peer piet gras jeuk wrok slop poet klas werp peer past pest poes krat doet
+trap krol werd gels lijf deel kijf held saai gele klas daas klak lada laad slag fles lijf
+grap hulp slap hout hels tres kruk klad jeuk hoog leep grap poet klas deel kijf
+"
+            },
         };
     }
 }
