@@ -397,6 +397,23 @@ trap krol werd gels lijf deel kijf held saai gele klas daas klak lada laad slag 
 grap hulp slap hout hels tres kruk klad jeuk hoog leep grap poet klas deel kijf
 "
             },
+            new Oefening
+            {
+                LesNr = 3,
+                DagNr = 4,
+                OefeningNr = 11,
+                Zin = @"
+leder draaidoos heilrijk kijkers dokter ark klier uil joker werf gelig wreef wol oker
+rode hotel kluis sloot yellow hoogst day werk yes wrok heer huis huishuur heg
+hoogtij hart hoogte haartjes hoofd wiel wieg wiegje water wiek weer leuk oor gaat
+gast helde huisje huilerig hart roef roe hij sophie had hik kijkers dokter post poster spier
+part het huis de dokter de post de holte draf af trouw luier flauw yellow draaidoos
+heilrijk kijkers dokter paar pier harder huis jager het wiel huilerig joker werf dokter
+hoogtij holte draaidoos huisje hiel haard heilrijk het wiegje de aap hij had hoogtij
+soldaat huis iedere kreeg allerlei herrie helde huisje af trouw luier wrok heer huis
+huur raar jas hoogst day werk yes klaar
+"
+            },
         };
     }
 }
