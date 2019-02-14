@@ -333,6 +333,17 @@ quitte qaua quara aqua quadrille queue quair qaua qaie qeur aqua
 qeuq aqua quadrille aueie quair quer aqua quelle aqa
 "
             },
+            new Oefening
+            {
+                LesNr = 3,
+                DagNr = 3,
+                OefeningNr = 6,
+                Zin = @"
+waas wal wek wekker swws swsw swsw was wees week wasje
+wiel wees waas wsws swsw wees waas waard wies wijs water wat wed waak wakker
+wedde willetje wal waarde watje waar wild wat waar
+"
+            },
         };
     }
 }
