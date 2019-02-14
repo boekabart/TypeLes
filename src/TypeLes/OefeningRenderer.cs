@@ -6,23 +6,52 @@ namespace TypeLes
 {
     public static class OefeningRenderer
     {
-        public static string[] Words(string invoer) =>
-            invoer.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+        public static string ReplaceAll(this string input, string find, string replace) => !input.Contains(find)
+            ? input
+            : input.Replace(find, replace).ReplaceAll(find, replace);
 
-        public static (string Voorbeeld, string Feedback, bool Klaar) LiveFeedback(string voorbeeld, string feedback)
+        public static string[] Words(string invoer) =>
+            invoer
+                .Split(' ', StringSplitOptions.RemoveEmptyEntries);
+
+        const string NewLine = @"
+";
+
+        private const string Enter = @"⏎";
+        private const string EnterSpace = @"⏎ ";
+        private const string EnterStar = @"⏎*";
+        private const string EnterStarSpace = @"⏎* ";
+
+        public static (string Voorbeeld, string Feedback, bool Klaar) LiveFeedback(string voorbeeld,
+            string actualinvoer)
         {
-            feedback = feedback.TrimStart();
+            voorbeeld = voorbeeld.Replace(NewLine, EnterSpace);
+            actualinvoer = actualinvoer.TrimStart();
+            var invoer = actualinvoer
+                    .Replace(NewLine, EnterSpace)
+                    .ReplaceAll("  ", " ")
+                    .Replace(" " + Enter, Enter);
+
             var words = Words(voorbeeld);
-            var typedWords = Words(feedback);
-            var completedWords = Math.Max(0,typedWords.Length - 1) + (feedback.EndsWith(' ') ? 1 : 0);
-            var klaar = completedWords == words.Length || typedWords.Length == words.Length && typedWords.Last().Length == words.Last().Length;
+            var typedWords = Words(invoer);
+            var completedWords = Math.Max(0, typedWords.Length - 1) +
+                                 (invoer.EndsWith(' ') || invoer.EndsWith(Environment.NewLine) ? 1 : 0);
+            var klaar = completedWords == words.Length || typedWords.Length == words.Length &&
+                        typedWords.Last().Length == words.Last().Length;
 
             var vb = string.Join(' ', words.Select((w, i) => !klaar && i == completedWords ? $"*{w}*" : w));
-            var fb = string.Join(' ', typedWords.Select((w, i) => StarsFor(w, words[i])));
-            if (feedback.EndsWith(' '))
+            var fb = string.Join(' ', typedWords.Select((w, i) => StarsWithEnterFor(w, words[i])))
+                .Replace(Enter, Enter + NewLine);
+            if (actualinvoer.EndsWith(' '))
                 fb += " ";
-            else
+            else if (!actualinvoer.EndsWith(NewLine))
                 fb = fb.Trim();
+            fb = fb.Replace(NewLine + " ", NewLine);
+
+            vb = vb
+                .Replace(EnterStarSpace, EnterStar + Environment.NewLine)
+                .Replace(EnterSpace, Enter + NewLine);
+
             return (vb, fb, klaar);
         }
 
@@ -36,11 +65,30 @@ namespace TypeLes
             return (voorbeeld, feedback, badWords.Length);
         }
 
+        internal static string StarsWithEnterFor(string invoer, string example)
+        {
+            var tepmVal = StarsFor(invoer.Replace(Enter, string.Empty), example.Replace(Enter, string.Empty));
+            if (example.EndsWith(Enter))
+            {
+                if (invoer.EndsWith(Enter)) tepmVal += Enter;
+                else tepmVal += NewLine;
+            }
+
+            return tepmVal;
+        }
+
         internal static string StarsFor(string invoer, string example)
         {
+            var plusCount = 0;
             var starCount = Math.Min(invoer.Length, example.Length);
             var spaceCount = example.Length - starCount;
-            return new string('*', starCount) + new string(' ', spaceCount);
+            if (invoer.Length > example.Length)
+            {
+                starCount--;
+                plusCount++;
+            }
+
+            return new string('*', starCount) + new string('+', plusCount) + new string(' ', spaceCount);
         }
 
         public static void ToScreen(this IEnumerable<Action> actions)

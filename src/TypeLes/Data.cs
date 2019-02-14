@@ -349,10 +349,10 @@ wedde willetje wal waarde watje waar wild wat waar
                 LesNr = 3,
                 DagNr = 3,
                 OefeningNr = 7,
-                Zin = @"
-koffer doel dok los lot kik dof roel roos rook rol doel oester doos rood offer tolk roe
-doos oor roffel oortje door droog lood rollade loda ros of olie oor ros dooi ooit oortje
-rood
+                Zinnen = @"
+koffer doel dok los lot kik dof roel roos rook rol doel oester doos
+rood offer tolk roe doos oor roffel oortje door droog lood rollade
+loda ros of olie oor ros dooi ooit oortje rood
 "
             },
             new Oefening
@@ -360,7 +360,7 @@ rood
                 LesNr = 3,
                 DagNr = 3,
                 OefeningNr = 8,
-                Zin = @"
+                Zinnen = @"
 werp prop werp prop werp prop werp prop werp prop werp prop
 worp drop worp drop wrop drop worp drop worp drop worp
 klap riep klap riep klap riep klap riep klap riep
@@ -371,7 +371,7 @@ klap riep klap riep klap riep klap riep klap riep
                 LesNr = 3,
                 DagNr = 3,
                 OefeningNr = 9,
-                Zin = @"
+                Zinnen = @"
 ik ga hier door de deur
 het figuur is erg groot
 werk jij ook heel goed door

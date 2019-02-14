@@ -8,17 +8,27 @@ namespace TypeLes
 {
     public class Oefening
     {
-        private string _zin;
         public string Zin
         {
-            get => _zin;
-            set => _zin = value.Replace('\r', ' ').Replace('\n', ' ').Replace("  ", " ").Trim();
+            set => Zinnen = value
+                .Replace('\r', ' ')
+                .Replace('\n', ' ')
+                .Replace("  ", " ")
+                .Trim('\r', '\n', ' ', '\t');
         }
-        
+
+        public string Zinnen
+        {
+            get => _zinnen;
+            set => _zinnen = value.Trim('\r', '\n', ' ', '\t');
+        }
+
         public int LesNr { get; set; }
         public int DagNr { get; set; }
         public string DagNaam => ((DayOfWeek) (((int) DayOfWeek.Thursday + DagNr) % 7)).ToString();
         public int OefeningNr { get; set; }
+
+        private string _zinnen;
     }
 
     class GemaakteOefening
@@ -63,8 +73,8 @@ namespace TypeLes
 
         private static void SlaOp(GemaakteOefening gemaakt, string persoon)
         {
-            var (voorbeeld, feedback, fouteWoorden) = OefeningRenderer.FinalFeedback(gemaakt.Oefening.Zin, gemaakt.Invoer);
-            var hisWords = OefeningRenderer.Words(gemaakt.Oefening.Zin);
+            var (voorbeeld, feedback, fouteWoorden) = OefeningRenderer.FinalFeedback(gemaakt.Oefening.Zinnen, gemaakt.Invoer);
+            var hisWords = OefeningRenderer.Words(gemaakt.Oefening.Zinnen);
             var wordCount = hisWords.Length;
             var wpm = wordCount / gemaakt.Duration.TotalMinutes;
 
@@ -80,7 +90,7 @@ Oefening:
 * Oefening {gemaakt.Oefening.DagNr}
 
 Opdracht:
-{gemaakt.Oefening.Zin}
+{gemaakt.Oefening.Zinnen}
 
 Getypt:
 {gemaakt.Invoer}
@@ -146,7 +156,7 @@ Woorden per minuut: {wpm}
             var input = string.Empty;
             Console.Clear();
             DateTimeOffset startTime = default;
-            var opdracht = oefening.Zin;
+            var opdracht = oefening.Zinnen;
             while (true)
             {
                 var (voorbeeld, feedback, klaar) = OefeningRenderer.LiveFeedback(opdracht, input);
@@ -242,13 +252,13 @@ Woorden per minuut: {wpm}
         private static void Feedback(GemaakteOefening gemaakt, string persoon)
         {
             Console.Clear();
-            var (voorbeeld, feedback, fouteWoorden) = OefeningRenderer.FinalFeedback(gemaakt.Oefening.Zin, gemaakt.Invoer);
+            var (voorbeeld, feedback, fouteWoorden) = OefeningRenderer.FinalFeedback(gemaakt.Oefening.Zinnen, gemaakt.Invoer);
             OefeningRenderer.Render(voorbeeld, feedback, Console.WindowWidth).ToScreen();
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
-            var hisWords = OefeningRenderer.Words(gemaakt.Oefening.Zin);
-            var myWords = OefeningRenderer.Words(gemaakt.Oefening.Zin);
+            var hisWords = OefeningRenderer.Words(gemaakt.Oefening.Zinnen);
+            var myWords = OefeningRenderer.Words(gemaakt.Oefening.Zinnen);
             var wordCount = hisWords.Length;
             var wpm = wordCount / gemaakt.Duration.TotalMinutes;
             Console.WriteLine($"{(int) gemaakt.Duration.TotalSeconds} seconden");
