@@ -355,6 +355,17 @@ doos oor roffel oortje door droog lood rollade loda ros of olie oor ros dooi ooi
 rood
 "
             },
+            new Oefening
+            {
+                LesNr = 3,
+                DagNr = 3,
+                OefeningNr = 8,
+                Zin = @"
+werp prop werp prop werp prop werp prop werp prop werp prop
+worp drop worp drop wrop drop worp drop worp drop worp
+klap riep klap riep klap riep klap riep klap riep
+"
+            },
         };
     }
 }
