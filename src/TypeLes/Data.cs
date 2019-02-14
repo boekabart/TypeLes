@@ -366,6 +366,21 @@ worp drop worp drop wrop drop worp drop worp drop worp
 klap riep klap riep klap riep klap riep klap riep
 "
             },
+            new Oefening
+            {
+                LesNr = 3,
+                DagNr = 3,
+                OefeningNr = 9,
+                Zin = @"
+ik ga hier door de deur
+het figuur is erg groot
+werk jij ook heel goed door
+welke kerel staat daar op straat
+dit gaat de goed herder glad af
+al dat geklaag door die gladheid
+de typiste typt haar werk foutloos
+"
+            },
         };
     }
 }
