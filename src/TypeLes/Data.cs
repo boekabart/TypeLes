@@ -271,6 +271,17 @@ ja ka ;la da al af jaas jars huur guur duf hars duf dart trad truus dal duf; daa
 dras dra trak tak trak kl;as kras kru k;k kuks kyks f a a l d k k u ; s
 "
             },
+            new Oefening
+            {
+                LesNr = 3,
+                DagNr = 1,
+                OefeningNr = 1,
+                Zin = @"
+eelt des ded des dek ekes eelt lees des dek keet deel leuk deel eed keet deel see
+seek teek keet kede deels delf dek de des deed eed dele dede tleet eekt eed eelde
+deel del ede deel del des deed
+"
+            },
         };
     }
 }
