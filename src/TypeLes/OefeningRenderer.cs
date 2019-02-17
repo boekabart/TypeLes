@@ -98,6 +98,10 @@ namespace TypeLes
 
         public static IEnumerable<Action> Render(string voorbeeld, string feedback, int consoleWidth)
         {
+            string[] Words(string invoer) =>
+                invoer
+                    .Split(new []{'\r','\n',' '}, StringSplitOptions.RemoveEmptyEntries);
+
             var words = Words(voorbeeld);
             var typedWords = Words(feedback.TrimStart() + "·");
             var wordNo = 0;
@@ -156,6 +160,12 @@ namespace TypeLes
                             yield return () => Console.ForegroundColor = ConsoleColor.White;
 
                         bold = !bold;
+                    }
+
+                    if (currentWord.EndsWith(Enter))
+                    {
+                        wordNo++;
+                        break;
                     }
                 }
 
