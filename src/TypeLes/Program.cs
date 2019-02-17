@@ -11,16 +11,18 @@ namespace TypeLes
         public string Zin
         {
             set => Zinnen = value
-                .Replace('\r', ' ')
+                .Replace("\r", string.Empty)
                 .Replace('\n', ' ')
                 .Replace("  ", " ")
-                .Trim('\r', '\n', ' ', '\t');
+                .Trim('\n', ' ', '\t');
         }
 
         public string Zinnen
         {
             get => _zinnen;
-            set => _zinnen = value.Trim('\r', '\n', ' ', '\t');
+            set => _zinnen = value
+                .Replace("\r",string.Empty)
+                .Trim('\n', ' ', '\t');
         }
 
         public int LesNr { get; set; }
@@ -189,7 +191,7 @@ Woorden per minuut: {wpm}
                 else if (key.Key == ConsoleKey.Enter)
                 {
                     if (input.Length != 0)
-                        input += Environment.NewLine;
+                        input += "\n";
                 }
                 else
                 {

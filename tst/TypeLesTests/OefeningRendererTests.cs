@@ -8,8 +8,7 @@ namespace TypeLesTests
     public class OefeningRendererTests
     {
         private const string Oef = "abcd def ghus alsjd as sala";
-        private const string OefZinnen = @"abcd def ghus
-alsjd as sala";
+        private const string OefZinnen = "abcd def ghus\nalsjd as sala";
 
         [Fact]
         public void Test1()
@@ -119,9 +118,8 @@ alsjd as sala";
         public void TestZinnen0()
         {
             var (vb, fb, klaar) = OefeningRenderer.LiveFeedback(OefZinnen, "");
-            vb.Should().Be(@"*abcd* def ghus⏎
-alsjd as sala");
-            fb.Should().Be(@"");
+            vb.Should().Be("*abcd* def ghus⏎\nalsjd as sala");
+            fb.Should().Be("");
             klaar.Should().BeFalse();
         }
 
@@ -129,9 +127,8 @@ alsjd as sala");
         public void TestZinnen1()
         {
             var (vb, fb, klaar) = OefeningRenderer.LiveFeedback(OefZinnen, "abc");
-            vb.Should().Be(@"*abcd* def ghus⏎
-alsjd as sala");
-            fb.Should().Be(@"***");
+            vb.Should().Be("*abcd* def ghus⏎\nalsjd as sala");
+            fb.Should().Be("***");
             klaar.Should().BeFalse();
         }
 
@@ -139,9 +136,8 @@ alsjd as sala");
         public void TestZinnen2()
         {
             var (vb, fb, klaar) = OefeningRenderer.LiveFeedback(OefZinnen, "abcde def ghu");
-            vb.Should().Be(@"abcd def *ghus⏎*
-alsjd as sala");
-            fb.Should().Be(@"***+ *** ***");
+            vb.Should().Be("abcd def *ghus⏎*\nalsjd as sala");
+            fb.Should().Be("***+ *** ***");
             klaar.Should().BeFalse();
         }
 
@@ -149,57 +145,54 @@ alsjd as sala");
         public void TestZinnen3()
         {
             var (vb, fb, klaar) = OefeningRenderer.LiveFeedback(OefZinnen, "abcd def ghus");
-            vb.Should().Be(@"abcd def *ghus⏎*
-alsjd as sala");
-            fb.Should().Be(@"**** *** ****");
+            vb.Should().Be("abcd def *ghus⏎*\nalsjd as sala");
+            fb.Should().Be("**** *** ****");
             klaar.Should().BeFalse();
         }
 
         [Fact]
         public void TestZinnen4()
         {
-            var (vb, fb, klaar) = OefeningRenderer.LiveFeedback(OefZinnen, @"abcd def ghus
-");
-            vb.Should().Be(@"abcd def ghus⏎
-*alsjd* as sala");
-            fb.Should().Be(@"**** *** ****⏎
-");
+            var (vb, fb, klaar) = OefeningRenderer.LiveFeedback(OefZinnen, "abcd def ghus\n");
+            vb.Should().Be("abcd def ghus⏎\n*alsjd* as sala");
+            fb.Should().Be("**** *** ****⏎\n");
             klaar.Should().BeFalse();
         }
 
         [Fact]
         public void TestZinnen5()
         {
-            var (vb, fb, klaar) = OefeningRenderer.LiveFeedback(OefZinnen, @"abcd def ghus ");
-            vb.Should().Be(@"abcd def ghus⏎
-*alsjd* as sala");
-            fb.Should().Be(@"**** *** ****
-");
+            var (vb, fb, klaar) = OefeningRenderer.LiveFeedback(OefZinnen, "abcd def ghus ");
+            vb.Should().Be("abcd def ghus⏎\n*alsjd* as sala");
+            fb.Should().Be("**** *** ****\n");
             klaar.Should().BeFalse();
         }
 
         [Fact]
         public void TestZinnen6()
         {
-            var (vb, fb, klaar) = OefeningRenderer.LiveFeedback(OefZinnen, @"abcd def ghus   
-  ");
-            vb.Should().Be(@"abcd def ghus⏎
-*alsjd* as sala");
-            fb.Should().Be(@"**** *** ****⏎
-");
+            var (vb, fb, klaar) = OefeningRenderer.LiveFeedback(OefZinnen, "abcd def ghus   \n  ");
+            vb.Should().Be("abcd def ghus⏎\n*alsjd* as sala");
+            fb.Should().Be("**** *** ****⏎\n");
             klaar.Should().BeFalse();
         }
 
-        [Fact(Skip = "Lastig")]
+        [Fact]
         public void TestZinnen7()
         {
-            var (vb, fb, klaar) = OefeningRenderer.LiveFeedback(OefZinnen, @"abcd def
-ghu");
-            vb.Should().Be(@"abcd def *ghus⏎*
-alsjd as sala");
-            fb.Should().Be(@"**** ***⏎***");
+            var (vb, fb, klaar) = OefeningRenderer.LiveFeedback(OefZinnen, "abcd def\nghu");
+            vb.Should().Be("abcd def *ghus⏎*\nalsjd as sala");
+            fb.Should().Be("**** ***⏎***");
             klaar.Should().BeFalse();
         }
 
+        [Fact]
+        public void TestZinnen8()
+        {
+            var (vb, fb, klaar) = OefeningRenderer.LiveFeedback(OefZinnen, "abcd\ndef ghu");
+            vb.Should().Be("abcd def *ghus⏎*\nalsjd as sala");
+            fb.Should().Be("****⏎*** ***");
+            klaar.Should().BeFalse();
+        }
     }
 }

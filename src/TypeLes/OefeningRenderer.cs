@@ -12,11 +12,11 @@ namespace TypeLes
 
         public static string[] Words(string invoer) =>
             invoer
-                .Split(' ', StringSplitOptions.RemoveEmptyEntries);
+                .Split(new [] {'\n',' '}, StringSplitOptions.RemoveEmptyEntries);
 
-        const string NewLine = @"
-";
+        private const string NewLine = "\n";
 
+        private const char EnterChar = '⏎';
         private const string Enter = @"⏎";
         private const string EnterSpace = @"⏎ ";
         private const string EnterStar = @"⏎*";
@@ -35,13 +35,13 @@ namespace TypeLes
             var words = Words(voorbeeld);
             var typedWords = Words(invoer);
             var completedWords = Math.Max(0, typedWords.Length - 1) +
-                                 (invoer.EndsWith(' ') || invoer.EndsWith(Environment.NewLine) ? 1 : 0);
+                                 (invoer.EndsWith(' ') || invoer.EndsWith(NewLine) ? 1 : 0);
             var klaar = completedWords == words.Length || typedWords.Length == words.Length &&
                         typedWords.Last().Length == words.Last().Length;
 
             var vb = string.Join(' ', words.Select((w, i) => !klaar && i == completedWords ? $"*{w}*" : w));
-            var fb = string.Join(' ', typedWords.Select((w, i) => StarsWithEnterFor(w, words[i])))
-                .Replace(Enter, Enter + NewLine);
+            var fb = string.Join(' ', typedWords.Select((w, i) => StarsWithEnterFor(w, words[i], i < completedWords)))
+                .Replace(EnterSpace, Enter);
             if (actualinvoer.EndsWith(' '))
                 fb += " ";
             else if (!actualinvoer.EndsWith(NewLine))
@@ -49,29 +49,31 @@ namespace TypeLes
             fb = fb.Replace(NewLine + " ", NewLine);
 
             vb = vb
-                .Replace(EnterStarSpace, EnterStar + Environment.NewLine)
+                .Replace(EnterStarSpace, EnterStar + NewLine)
                 .Replace(EnterSpace, Enter + NewLine);
 
             return (vb, fb, klaar);
         }
             
-        public static (string Voorbeeld, string Feedback, int FouteWoorden) FinalFeedback(string voorbeeld, string feedback)
+        public static (string Voorbeeld, string Feedback, int FouteWoorden) FinalFeedback(string opdracht, string invoer)
         {
-            var words = Words(voorbeeld);
-            var typedWords = Words(feedback);
+            var words = Words(opdracht);
+            var typedWords = Words(invoer);
 
             var badWords = words.Where((w, i) => !typedWords[i].Equals(w)).ToArray();
 
-            return (voorbeeld, feedback, badWords.Length);
+            return (opdracht, invoer, badWords.Length);
         }
 
-        internal static string StarsWithEnterFor(string invoer, string example)
+        internal static string StarsWithEnterFor(string invoer, string example, bool invoerCompleted)
         {
             var tepmVal = StarsFor(invoer.Replace(Enter, string.Empty), example.Replace(Enter, string.Empty));
+            if (invoer.EndsWith(Enter))
+                tepmVal += Enter;
             if (example.EndsWith(Enter))
             {
-                if (invoer.EndsWith(Enter)) tepmVal += Enter;
-                else tepmVal += NewLine;
+                if (invoerCompleted)
+                    tepmVal += NewLine;
             }
 
             return tepmVal;
@@ -98,12 +100,12 @@ namespace TypeLes
 
         public static IEnumerable<Action> Render(string voorbeeld, string feedback, int consoleWidth)
         {
-            string[] Words(string invoer) =>
+            string[] Wordz(string invoer) =>
                 invoer
-                    .Split(new []{'\r','\n',' '}, StringSplitOptions.RemoveEmptyEntries);
+                    .Split(new []{'\n',' '}, StringSplitOptions.RemoveEmptyEntries);
 
-            var words = Words(voorbeeld);
-            var typedWords = Words(feedback.TrimStart() + "·");
+            var words = Wordz(voorbeeld);
+            var typedWords = Wordz(feedback.Replace(Enter,EnterSpace).TrimStart() + "·");
             var wordNo = 0;
             var bold = false;
             var inputRow = 0;
