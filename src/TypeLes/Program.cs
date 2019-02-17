@@ -181,10 +181,15 @@ Woorden per minuut: {wpm}
                     if (input.Length > 0)
                         input = input.Substring(0, input.Length - 1);
                 }
-                else if (key.Key == ConsoleKey.Enter || key.Key == ConsoleKey.Spacebar)
+                else if (key.Key == ConsoleKey.Spacebar)
                 {
                     if (input.Length != 0)
                         input += " ";
+                }
+                else if (key.Key == ConsoleKey.Enter)
+                {
+                    if (input.Length != 0)
+                        input += Environment.NewLine;
                 }
                 else
                 {
