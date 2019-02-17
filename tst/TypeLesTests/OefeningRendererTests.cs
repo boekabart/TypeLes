@@ -194,5 +194,14 @@ namespace TypeLesTests
             fb.Should().Be("****⏎*** ***");
             klaar.Should().BeFalse();
         }
+
+        [Fact]
+        public void TestZinnen9()
+        {
+            var (vb, fb, klaar) = OefeningRenderer.LiveFeedback(OefZinnen, "ab\ndef ghu");
+            vb.Should().Be("abcd def *ghus⏎*\nalsjd as sala");
+            fb.Should().Be("**  ⏎*** ***");
+            klaar.Should().BeFalse();
+        }
     }
 }

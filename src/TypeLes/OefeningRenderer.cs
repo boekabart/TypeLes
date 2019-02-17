@@ -19,6 +19,7 @@ namespace TypeLes
         private const char EnterChar = '⏎';
         private const string Enter = @"⏎";
         private const string EnterSpace = @"⏎ ";
+        private const string SpaceEnter = @" ⏎";
         private const string EnterStar = @"⏎*";
         private const string EnterStarSpace = @"⏎* ";
 
@@ -57,12 +58,20 @@ namespace TypeLes
             
         public static (string Voorbeeld, string Feedback, int FouteWoorden) FinalFeedback(string opdracht, string invoer)
         {
-            var words = Words(opdracht);
-            var typedWords = Words(invoer);
+            try
+            {
 
-            var badWords = words.Where((w, i) => !typedWords[i].Equals(w)).ToArray();
+                var words = Words(opdracht);
+                var typedWords = Words(invoer);
 
-            return (opdracht, invoer, badWords.Length);
+                var badWords = words.Where((w, i) => !typedWords[i].Equals(w)).ToArray();
+
+                return (opdracht, invoer, badWords.Length);
+            }
+            catch
+            {
+                return (opdracht, invoer, -1);
+            }
         }
 
         internal static string StarsWithEnterFor(string invoer, string example, bool invoerCompleted)
@@ -105,7 +114,7 @@ namespace TypeLes
                     .Split(new []{'\n',' '}, StringSplitOptions.RemoveEmptyEntries);
 
             var words = Wordz(voorbeeld);
-            var typedWords = Wordz(feedback.Replace(Enter,EnterSpace).TrimStart() + "·");
+            var typedWords = Wordz(feedback.ReplaceAll(SpaceEnter,Enter).Replace(Enter,EnterSpace).TrimStart() + "·");
             var wordNo = 0;
             var bold = false;
             var inputRow = 0;
