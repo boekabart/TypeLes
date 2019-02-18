@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <!-- BUILD -->
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputType>Exe</OutputType>
+    <IsPackable>false</IsPackable>
+    <RelativePublishBinDir>bin</RelativePublishBinDir>
+    <RuntimeIdentifiers>osx-x64,win-x64</RuntimeIdentifiers>
+  </PropertyGroup>
+  <!-- *SPECIFICS* -->
+  <PropertyGroup>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <!-- *REF NUGET PACKAGES* -->
+  <ItemGroup>
+  </ItemGroup>
+  <!-- *REF PROJECTS* -->
+  <ItemGroup>
+  </ItemGroup>
+  <!-- *EMBEDDED RESOURCES* -->
+  <ItemGroup>
+  </ItemGroup>
+  <!-- EMBED SOURCES -->
+  <ItemGroup>
+    <EmbeddedFiles Include="@(Compile)" />
+  </ItemGroup>
+</Project>

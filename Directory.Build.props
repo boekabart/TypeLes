@@ -1,0 +1,46 @@
+<Project>
+
+  <PropertyGroup>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>embedded</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
+    <TreatSpecificWarningsAsErrors />
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
+    <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+    <GenerateAssemblyInformationalVersionAttribute>false</GenerateAssemblyInformationalVersionAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Copyright>Copyright 2015-2019 Divverence B.V.</Copyright>
+    <Authors>Divverence B.V.</Authors>
+    <PackageIconUrl>http://www.divverence.com/divverencelogo.png</PackageIconUrl>
+  </PropertyGroup>
+
+  <!-- PACKAGE AND VERSION CREATION -->
+  <Import Project="built\*.Build.props" />
+  <ItemGroup>
+    <Compile Include="..\..\built\SharedAssemblyInfo*.cs" Link="SharedAssemblyInfo.cs" />
+  </ItemGroup>
+
+  <!-- Divv.Gear.Configuration -->
+  <ItemGroup>
+    <ConfigurationFiles Include="etc\**\*.properties" />
+    <ConfigurationFiles Include="etc\**\*.ini" />
+    <ConfigurationFiles Include="etc\**\*.json" />
+    <ConfigurationFiles Include="etc\**\*.config" />
+    <ConfigurationFiles Include="etc\**\*.hocon" />
+  </ItemGroup>
+
+  <Target Name="MyAfterBuild" AfterTargets="Build">
+    <Copy SourceFiles="@(ConfigurationFiles)" DestinationFiles="@(ConfigurationFiles-&gt;'$(ProjectDir)bin\$(Configuration)\etc\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" UseHardlinksIfPossible="true" />
+  </Target>
+
+  <Target Name="MyAfterPublish" AfterTargets="Publish">
+    <Copy SourceFiles="@(ConfigurationFiles)" DestinationFiles="@(ConfigurationFiles-&gt;'$(PublishDir)..\etc\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+  </Target>
+</Project>
