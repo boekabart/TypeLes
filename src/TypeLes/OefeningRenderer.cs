@@ -107,7 +107,7 @@ namespace TypeLes
             foreach (var a in actions) a();
         }
 
-        public static IEnumerable<Action> Render(string voorbeeld, string feedback, int consoleWidth)
+        public static List<Action> Render(string voorbeeld, string feedback, int consoleWidth, int windowHeight, int emptyLines = 1)
         {
             string[] Wordz(string invoer) =>
                 invoer
@@ -119,15 +119,22 @@ namespace TypeLes
             var bold = false;
             var inputRow = 0;
             var inputPos = 0;
-            for (var row = 0; ; row++)
+            var render = new List<Action>();
+            for (var rowNumber = 0; ; rowNumber++)
             {
-                yield return () => Console.SetCursorPosition(0, row * 3);
+                var linesPerLine = 2 + emptyLines;
+
+                if (emptyLines != 0 && rowNumber * linesPerLine + 2 >= windowHeight)
+                    return Render(voorbeeld, feedback, consoleWidth, windowHeight, emptyLines - 1);
+
+                var top = rowNumber * linesPerLine;
+                render.Add(() => Console.SetCursorPosition(0, top));
                 int pos = 0;
                 var startWordNo = wordNo;
                 string todo = String.Empty;
 
                 if (bold)
-                    yield return () => Console.ForegroundColor = ConsoleColor.White;
+                    render.Add(() => Console.ForegroundColor = ConsoleColor.White);
 
                 for (; wordNo < words.Length; wordNo++)
                 {
@@ -139,15 +146,16 @@ namespace TypeLes
                     {
                         if (todo.Length > 0)
                         {
-                            yield return () => Console.Write(todo);
+                            var toPrint = todo;
+                            render.Add(() => Console.Write(toPrint));
                             pos += todo.Length;
                             todo = String.Empty;
                         }
 
                         if (bold)
-                            yield return () => Console.ForegroundColor = ConsoleColor.Gray;
+                            render.Add(() => Console.ForegroundColor = ConsoleColor.Gray);
                         else
-                            yield return () => Console.ForegroundColor = ConsoleColor.White;
+                            render.Add(() => Console.ForegroundColor = ConsoleColor.White);
                         bold = !bold;
                     }
 
@@ -160,15 +168,16 @@ namespace TypeLes
                     {
                         if (todo.Length > 0)
                         {
-                            yield return () => Console.Write(todo);
+                            var toPrint = todo;
+                            render.Add(() => Console.Write(toPrint));
                             pos += todo.Length;
                             todo = String.Empty;
                         }
 
                         if (bold)
-                            yield return () => Console.ForegroundColor = ConsoleColor.Gray;
+                            render.Add(() => Console.ForegroundColor = ConsoleColor.Gray);
                         else
-                            yield return () => Console.ForegroundColor = ConsoleColor.White;
+                            render.Add(() => Console.ForegroundColor = ConsoleColor.White);
 
                         bold = !bold;
                     }
@@ -182,24 +191,27 @@ namespace TypeLes
 
                 if (todo.Length > 0)
                 {
-                    yield return () => Console.Write(todo);
+                    var toPrint = todo;
+                    render.Add(() => Console.Write(toPrint));
                     pos += todo.Length;
                     todo = String.Empty;
                 }
 
                 if (bold)
-                    yield return () => Console.ForegroundColor = ConsoleColor.Gray;
+                    render.Add(() => Console.ForegroundColor = ConsoleColor.Gray);
 
                 pos = 0;
 
                 for (var word2 = startWordNo; word2 < wordNo && word2 < typedWords.Length; word2++)
                 {
-                    yield return () => Console.SetCursorPosition(pos, row * 3 + 1);
+                    var thePos = pos;
+                    var theRow = rowNumber * linesPerLine + 1;
+                    render.Add(() => Console.SetCursorPosition(thePos, theRow));
                     var starredWord = typedWords[word2];
-                    yield return () => Console.Write(starredWord.Replace('·', ' '));
+                    render.Add(() => Console.Write(starredWord.Replace('·', ' ')));
                     if (starredWord.EndsWith('·'))
                     {
-                        inputRow = row;
+                        inputRow = rowNumber;
                         inputPos = pos + starredWord.Length - 1;
                     }
 
@@ -208,10 +220,12 @@ namespace TypeLes
 
                 if (wordNo >= words.Length)
                 {
-                    yield return () => Console.SetCursorPosition(inputPos, inputRow * 3 + 1);
+                    render.Add(() => Console.SetCursorPosition(inputPos, inputRow * linesPerLine + 1));
                     break;
                 }
             }
+
+            return render;
         }
     }
 }

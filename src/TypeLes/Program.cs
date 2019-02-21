@@ -167,7 +167,7 @@ Woorden per minuut: {wpm}
                 if (klaar)
                     break;
 
-                OefeningRenderer.Render(voorbeeld, feedback, Console.WindowWidth).ToScreen();
+                OefeningRenderer.Render(voorbeeld, feedback, Console.WindowWidth, Console.WindowHeight).ToScreen();
 
                 var key = Console.ReadKey(true);
                 if (key.Key == ConsoleKey.Escape)
@@ -261,7 +261,7 @@ Woorden per minuut: {wpm}
         {
             Console.Clear();
             var (voorbeeld, feedback, fouteWoorden) = OefeningRenderer.FinalFeedback(gemaakt.Oefening.Zinnen, gemaakt.Invoer);
-            OefeningRenderer.Render(voorbeeld, feedback, Console.WindowWidth).ToScreen();
+            OefeningRenderer.Render(voorbeeld, feedback, Console.WindowWidth, Console.WindowHeight).ToScreen();
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
