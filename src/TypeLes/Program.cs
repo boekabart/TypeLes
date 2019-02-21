@@ -160,6 +160,8 @@ Woorden per minuut: {wpm}
             Console.Clear();
             DateTimeOffset startTime = default;
             var opdracht = oefening.Zinnen;
+            int consoleWidth = Console.WindowWidth;
+            int windowHeight = Console.WindowHeight;
             while (true)
             {
                 var (voorbeeld, feedback, klaar) = OefeningRenderer.LiveFeedback(opdracht, input);
@@ -167,7 +169,14 @@ Woorden per minuut: {wpm}
                 if (klaar)
                     break;
 
-                OefeningRenderer.Render(voorbeeld, feedback, Console.WindowWidth, Console.WindowHeight).ToScreen();
+                if (consoleWidth != Console.WindowWidth || windowHeight != Console.WindowHeight)
+                {
+                    consoleWidth = Console.WindowWidth;
+                    windowHeight = Console.WindowHeight;
+                    Console.Clear();
+                }
+
+                OefeningRenderer.Render(voorbeeld, feedback, consoleWidth, windowHeight).ToScreen();
 
                 var key = Console.ReadKey(true);
                 if (key.Key == ConsoleKey.Escape)
