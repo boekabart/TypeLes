@@ -503,6 +503,16 @@ midden humbugkrom voet nop mist neer bier brom plens hoera norm hoog geen
 meer meertje mast blik blaf miauw vader moeder mens morgen
 "
             },
+            new Oefening
+            {
+                LesNr = 4,
+                DagNr = 3,
+                OefeningNr = 7,
+                Zinnen = @"
+lot dib sel fek kie fel lek del lik eis les elk daf laf jas kik lik gat dag gad jes suf juf sul ril sir raa dof sos dik was wil wek spa pas kap dop hap pop qua tas tel dit pot wit tor rek ues les dag day yel ben buk bik nat nar nek bes bij mei ver mag gum mus qua bes nio lik hum mud qui win ven nig vis bok nog gau  kwa eer ten yes ups dok ros sof kok tol bol mol bek bid ten vel mat mes mik vet vik tol bol iep qua sof kik naq ;l; w;r t;a v;v jkl asd fgh
+nadelen voordelen namelijk voorlijk levensstijl dansvloer veeal vaderlijk degelijk naadloos nadenken bedenken denken vaderlijk meermaals negentig wonderlijk sprookjes aardig veelal voorlijk steeds kereltje sierlijke groten vergroten venster dagen daken
+"
+            },
         };
     }
 }
