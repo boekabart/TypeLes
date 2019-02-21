@@ -431,6 +431,51 @@ aap herrie soldaat gekrulde kijkers dokter post het wiegje het hart de holte klo
 wreef wol oker kreeg allerlei
 "
             },
+            new Oefening
+            {
+                LesNr = 4,
+                DagNr = 1,
+                OefeningNr = 1,
+                Zin = @"
+vvfvedniv fvfv fvvf raar taar vlak veel valk vlug voor vork vaart vaar voor valk vaart
+verte reev vers vfvf fvfv vast vaak vuur vader vast vers vert vrees vers voort voor
+vries vriest vaak aviv
+"
+            },
+            new Oefening
+            {
+                LesNr = 4,
+                DagNr = 1,
+                OefeningNr = 2,
+                Zin = @"
+roppem pmolk mjmj jjmj mals maat maar meet moet mier maak mies moot maak
+rakkem makkers meer mermot marmer maar makelaar mees maatregel mot mat
+meter matig mees meeus mast meter moet mier
+"
+            },
+            new Oefening
+            {
+                LesNr = 4,
+                DagNr = 1,
+                OefeningNr = 3,
+                Zin = @"
+lav lavk slav veel valk vlak voor vlag vaardig vlak voor vlieg vla voor vaardig veel
+voel vaal vaak vlug voordeel voor maar mast miet moeder meer mals meter mees
+meeuw matig moest modder mekaar marmer moet maker mier makker mast malloot
+mes mams
+"
+            },
+            new Oefening
+            {
+                LesNr = 4,
+                DagNr = 1,
+                OefeningNr = 4,
+                Zin = @"
+deeld tsarb fbbf bffb fbfb fbbf bal baal bast bah bak baal rakkeb beest beeld borstel
+borst bier bast bad boot boor soerb boek beker bres breek brak braak bast baal bus
+barst blad beeld
+"
+            },
         };
     }
 }
