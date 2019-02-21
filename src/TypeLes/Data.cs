@@ -476,6 +476,33 @@ borst bier bast bad boot boor soerb boek beker bres breek brak braak bast baal b
 barst blad beeld
 "
             },
+            new Oefening
+            {
+                LesNr = 4,
+                DagNr = 2,
+                OefeningNr = 5,
+                Zin = @"
+njjn jnjn njnj raan dana nader neer nagel nadeel nederland neus noest neder nader
+natuurlijk na nadrenken neem neer naam noem negen negers nader naden nee
+naslaan nar netten negen naar
+"
+            },
+            new Oefening
+            {
+                LesNr = 4,
+                DagNr = 2,
+                OefeningNr = 6,
+                Zin = @"
+tov tob nat mis vis bes nes mes vak bak net met vim bum nop veer rieb niet moet
+voet blus nest mist vlak brak neer moor best mier klev krom brom vlas plan tobt
+sopt vlag kram plun vlerk bleek nurks modem trams plens stoms poets bende meten
+steunt verbied verlet meest lampet ver hoteldief hoofdelijk hoogte neer meer meer
+meermaals koor houterig kei veelvraat hoofd morgen middag muiter eloten waarom
+import lummel port nummer nimmer normen pesten premie jodium egamen minder
+midden humbugkrom voet nop mist neer bier brom plens hoera norm hoog geen
+meer meertje mast blik blaf miauw vader moeder mens morgen
+"
+            },
         };
     }
 }
