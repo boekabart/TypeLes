@@ -531,6 +531,26 @@ hoofdstuk opstel proost lijkt werelddeel elkaar lijkt letter popje klomp klompen
 moeilijk he gemakkelijk he eitje doe je best poffertje opa oma jarige job weet je wat ik kan typen
 "
             },
+            new Oefening
+            {
+                LesNr = 4,
+                DagNr = 5,
+                OefeningNr = 9,
+                Zin = @"
+krets moob reteb aster sterk terras helper gierig poeder grappig halster waggelt
+kadaster foutloos fluiter gladheid paradijs huiselijk geroosterd quotient waarom
+perenboom appelboom pruimenboom notenboom eikenboom vlierbos apenstaartje
+klein klomp klomp klomp moeilijk he kleuter kleuterklas vagebond poppenhuis
+poppenkast typen huis dadels getrouwd klaar traag graag aster sterk terras helper
+gierig poeder grappig halster waggelt kadaster foutloos fluister gladheid paradijs
+huiselijk geroosterd quotient waarom perenboom appelboom pruimenboom
+notenboom iekenboom vlierbos apenstaartje klein klomp klomp klomp gaat het nu
+beter kleuter kleuterklas vagebond poppenhuis poppenkast typen huis dadels
+getrouwed klaar traag graag aster sterk terras helper gierig poeder grappig halster
+waggelt kadaster foutloos fluister gladheid paradijs slutel vingers kluis bank
+grondstelling grootmoeder
+"
+            },
         };
     }
 }
