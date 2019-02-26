@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Threading;
 
 namespace TypeLes
 {
@@ -169,6 +170,7 @@ Woorden per minuut: {wpm}
             int consoleWidth = Console.WindowWidth;
             int windowHeight = Console.WindowHeight;
             var backspaceCount = 0;
+            bool mustRender = true;
             while (true)
             {
                 var (voorbeeld, feedback, klaar) = OefeningRenderer.LiveFeedback(opdracht, input, gebruikBoek);
@@ -181,42 +183,54 @@ Woorden per minuut: {wpm}
                     consoleWidth = Console.WindowWidth;
                     windowHeight = Console.WindowHeight;
                     Console.Clear();
+                    mustRender = true;
                 }
 
-                OefeningRenderer.Render(voorbeeld, feedback, consoleWidth, windowHeight).ToScreen();
+                if (mustRender)
+                    OefeningRenderer.Render(voorbeeld, feedback, consoleWidth, windowHeight).ToScreen();
+                    mustRender = false;
 
-                var key = Console.ReadKey(true);
-                if (key.Key == ConsoleKey.Escape)
+                if (!Console.KeyAvailable)
                 {
-                    if (VraagEchtAfsluiten())
-                        return null;
-                    Console.Clear();
-                    continue;
-                }
+                    Thread.Sleep(10);
 
-                if (key.Key == ConsoleKey.Backspace)
-                {
-                    if (input.Length > 0)
-                    {
-                        input = input.Substring(0, input.Length - 1);
-                        backspaceCount++;
-                    }
-                }
-                else if (key.Key == ConsoleKey.Spacebar)
-                {
-                    if (input.Length != 0)
-                        input += " ";
-                }
-                else if (key.Key == ConsoleKey.Enter)
-                {
-                    if (input.Length != 0)
-                        input += "\n";
                 }
                 else
                 {
-                    if (input.Length == 0)
-                        startTime = DateTimeOffset.UtcNow;
-                    input += key.KeyChar;
+                    var key = Console.ReadKey(true);
+                    mustRender = true;
+                    if (key.Key == ConsoleKey.Escape)
+                    {
+                        if (VraagEchtAfsluiten())
+                            return null;
+                        Console.Clear();
+                        continue;
+                    }
+
+                    if (key.Key == ConsoleKey.Backspace)
+                    {
+                        if (input.Length > 0)
+                        {
+                            input = input.Substring(0, input.Length - 1);
+                            backspaceCount++;
+                        }
+                    }
+                    else if (key.Key == ConsoleKey.Spacebar)
+                    {
+                        if (input.Length != 0)
+                            input += " ";
+                    }
+                    else if (key.Key == ConsoleKey.Enter)
+                    {
+                        if (input.Length != 0)
+                            input += "\n";
+                    }
+                    else
+                    {
+                        if (input.Length == 0)
+                            startTime = DateTimeOffset.UtcNow;
+                        input += key.KeyChar;
+                    }
                 }
             }
 
