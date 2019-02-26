@@ -40,6 +40,7 @@ namespace TypeLes
         public TimeSpan Duration => EndTime - StartTime;
         public string Invoer { get; set; }
         public Oefening Oefening { get; set; }
+        public bool BoekGebruikt { get; set; }
     }
 
     public class Program
@@ -61,7 +62,7 @@ namespace TypeLes
 
                 while (true)
                 {
-                    var gemaakt = DoeOefening(oefening);
+                    var gemaakt = DoeOefening(oefening, oefening.LesNr > 2);
                     if (gemaakt is null)
                         break;
 
@@ -97,6 +98,8 @@ Opdracht:
 
 Getypt:
 {gemaakt.Invoer}
+
+Overgetypt van: {(gemaakt.BoekGebruikt?"Boek":"Scherm")}
 
 Foute woorden: {fouteWoorden}
 Woorden per minuut: {wpm}
@@ -154,7 +157,7 @@ Woorden per minuut: {wpm}
             return list.Select(o => (o, done.Count(d => d.Les==o.LesNr && d.Dag == o.DagNr && d.Oefening == o.OefeningNr)));
         }
 
-        private static GemaakteOefening DoeOefening(Oefening oefening)
+        private static GemaakteOefening DoeOefening(Oefening oefening, bool gebruikBoek)
         {
             var input = string.Empty;
             Console.Clear();
@@ -164,7 +167,7 @@ Woorden per minuut: {wpm}
             int windowHeight = Console.WindowHeight;
             while (true)
             {
-                var (voorbeeld, feedback, klaar) = OefeningRenderer.LiveFeedback(opdracht, input);
+                var (voorbeeld, feedback, klaar) = OefeningRenderer.LiveFeedback(opdracht, input, gebruikBoek);
 
                 if (klaar)
                     break;
@@ -216,7 +219,8 @@ Woorden per minuut: {wpm}
                 StartTime = startTime,
                 EndTime = endTime,
                 Invoer = input,
-                Oefening = oefening
+                Oefening = oefening,
+                BoekGebruikt = gebruikBoek
             };
         }
 

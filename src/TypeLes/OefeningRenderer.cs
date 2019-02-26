@@ -24,7 +24,7 @@ namespace TypeLes
         private const string EnterStarSpace = @"⏎* ";
 
         public static (string Voorbeeld, string Feedback, bool Klaar) LiveFeedback(string voorbeeld,
-            string actualinvoer)
+            string actualinvoer, bool verbergVoorbeeldTotGetypt = false)
         {
             voorbeeld = voorbeeld.Replace(NewLine, EnterSpace);
             actualinvoer = actualinvoer.TrimStart();
@@ -40,7 +40,7 @@ namespace TypeLes
             var klaar = completedWords == words.Length || typedWords.Length == words.Length &&
                         typedWords.Last().Length == words.Last().Length;
 
-            var vb = string.Join(' ', words.Select((w, i) => !klaar && i == completedWords ? $"*{w}*" : w));
+            var vb = string.Join(' ', words.Select((w, i) => verbergVoorbeeldTotGetypt && i>= completedWords?Verborgen(w):w ).Select((w, i) => !klaar && i == completedWords ? $"*{w}*" : w));
             var fb = string.Join(' ', typedWords.Select((w, i) => StarsWithEnterFor(w, words[i], i < completedWords)))
                 .Replace(EnterSpace, Enter);
             if (actualinvoer.EndsWith(' '))
@@ -55,7 +55,14 @@ namespace TypeLes
 
             return (vb, fb, klaar);
         }
-            
+
+        private static string Verborgen(string s)
+        {
+            if (s.EndsWith(Enter))
+                return new string('?', s.Length - 1) + Enter;
+            return new string('?', s.Length);
+        }
+
         public static (string Voorbeeld, string Feedback, int FouteWoorden) FinalFeedback(string opdracht, string invoer)
         {
             try
