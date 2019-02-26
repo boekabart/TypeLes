@@ -513,6 +513,44 @@ lot dib sel fek kie fel lek del lik eis les elk daf laf jas kik lik gat dag gad 
 nadelen voordelen namelijk voorlijk levensstijl dansvloer veeal vaderlijk degelijk naadloos nadenken bedenken denken vaderlijk meermaals negentig wonderlijk sprookjes aardig veelal voorlijk steeds kereltje sierlijke groten vergroten venster dagen daken
 "
             },
+            new Oefening
+            {
+                LesNr = 4,
+                DagNr = 4,
+                OefeningNr = 8,
+                Zin = @"
+keets letsop paard rettel wortels klopper duister radeloos uiterlijk wortel quelle
+stapper koper spier griep spook poffertje jutter werkelijk hoepel opera steeds
+geestelijk heerlijkheid jaar distel jaar rad gieter lastig heers geest leer gaaster als we
+wordt de eerste plaats getrek door apparaat die lied lawaai of waar duidelijk iets
+weeft altijd uit gaat terwijl allerlei al fluit ook als is het rijkste deel fraai pastelkleur
+werk opstel plaats dat is optel dit egypte waar we steeds het grootste hoe steek
+hoefde te weten sjouwer eerst lef iets op qui min; europa ;gh;s regels uiterlijk
+sleutel is wijder pit was die as water tot juist aqua wer; gro; qop staat kok terwijl
+hoofdstuk opstel proost lijkt werelddeel elkaar lijkt letter popje klomp klompen
+moeilijk he gemakkelijk he eitje doe je best poffertje opa oma jarige job weet je wat ik kan typen
+"
+            },
+            new Oefening
+            {
+                LesNr = 4,
+                DagNr = 5,
+                OefeningNr = 9,
+                Zin = @"
+krets moob reteb aster sterk terras helper gierig poeder grappig halster waggelt
+kadaster foutloos fluiter gladheid paradijs huiselijk geroosterd quotient waarom
+perenboom appelboom pruimenboom notenboom eikenboom vlierbos apenstaartje
+klein klomp klomp klomp moeilijk he kleuter kleuterklas vagebond poppenhuis
+poppenkast typen huis dadels getrouwd klaar traag graag aster sterk terras helper
+gierig poeder grappig halster waggelt kadaster foutloos fluister gladheid paradijs
+huiselijk geroosterd quotient waarom perenboom appelboom pruimenboom
+notenboom iekenboom vlierbos apenstaartje klein klomp klomp klomp gaat het nu
+beter kleuter kleuterklas vagebond poppenhuis poppenkast typen huis dadels
+getrouwed klaar traag graag aster sterk terras helper gierig poeder grappig halster
+waggelt kadaster foutloos fluister gladheid paradijs slutel vingers kluis bank
+grondstelling grootmoeder
+"
+            },
         };
     }
 }
