@@ -41,6 +41,7 @@ namespace TypeLes
         public string Invoer { get; set; }
         public Oefening Oefening { get; set; }
         public bool BoekGebruikt { get; set; }
+        public int AantalBackspaces { get; set; }
     }
 
     public class Program
@@ -100,6 +101,8 @@ Getypt:
 {gemaakt.Invoer}
 
 Overgetypt van: {(gemaakt.BoekGebruikt?"Boek":"Scherm")}
+
+Backspace gebruikt: {gemaakt.AantalBackspaces} keer
 
 Foute woorden: {fouteWoorden}
 Woorden per minuut: {wpm}
@@ -165,6 +168,7 @@ Woorden per minuut: {wpm}
             var opdracht = oefening.Zinnen;
             int consoleWidth = Console.WindowWidth;
             int windowHeight = Console.WindowHeight;
+            var backspaceCount = 0;
             while (true)
             {
                 var (voorbeeld, feedback, klaar) = OefeningRenderer.LiveFeedback(opdracht, input, gebruikBoek);
@@ -193,7 +197,10 @@ Woorden per minuut: {wpm}
                 if (key.Key == ConsoleKey.Backspace)
                 {
                     if (input.Length > 0)
+                    {
                         input = input.Substring(0, input.Length - 1);
+                        backspaceCount++;
+                    }
                 }
                 else if (key.Key == ConsoleKey.Spacebar)
                 {
@@ -220,7 +227,8 @@ Woorden per minuut: {wpm}
                 EndTime = endTime,
                 Invoer = input,
                 Oefening = oefening,
-                BoekGebruikt = gebruikBoek
+                BoekGebruikt = gebruikBoek,
+                AantalBackspaces = backspaceCount
             };
         }
 
