@@ -551,6 +551,25 @@ waggelt kadaster foutloos fluister gladheid paradijs slutel vingers kluis bank
 grondstelling grootmoeder
 "
             },
+            new Oefening
+            {
+                LesNr = 4,
+                DagNr = 6,
+                OefeningNr = 10,
+                Zin = @"
+duidelijk sleutelbos test gelukt etalage leeg laat quotient tafellaken gedekt
+pannenspons tasje geld slutelgat verjaardag vriendelijk aster terras helper
+gierig poeder grappig halster waggelt foutloos fluiter klappen regen boter natuurlijk
+figuur trein wagon rails restauratiewagen netturg keert etog fiets geroosterd
+figuurlijk huiselijk kleurrijk nog een keer netturg keert etog fiets geroosterd figuurlijk
+huiselijk kleurrijk passagiers kaartje station broodje qrouette qroque stadion gras
+kunstgras penalty straf blessure goal goal goal buitenspel publiek supporters
+volleybal veld spelers net alf sport beweging welke sport doe jij wist jij dat sporten
+heel belangrijk is voor je spieren je wordt er heel sterk van het ligt er wel aan welke
+sport je doet kreet kr;s krakeel rad;s rui;te krag krekels rakker raaf grote grutten
+alstblieft dank je wel aster sterk terras helper klager straks lasser gierig poeder
+",
+            },
         };
     }
 }
