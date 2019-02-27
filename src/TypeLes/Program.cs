@@ -163,7 +163,7 @@ Woorden per minuut: {wpm}
 
         private static GemaakteOefening DoeOefening(Oefening oefening, bool gebruikBoek)
         {
-            Console.Beep(2000, 100);
+            Console.Beep();
             var input = string.Empty;
             Console.Clear();
             DateTimeOffset startTime = default;
@@ -192,7 +192,7 @@ Woorden per minuut: {wpm}
                     OefeningRenderer.Render(voorbeeld, feedback, consoleWidth, windowHeight).ToScreen();
                     mustRender = false;
                     if (feedback.EndsWith("+"))
-                        Console.Beep(2000, 100);
+                        Console.Beep();
                 }
 
                 if (!Console.KeyAvailable)
