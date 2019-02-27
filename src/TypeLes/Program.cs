@@ -163,6 +163,7 @@ Woorden per minuut: {wpm}
 
         private static GemaakteOefening DoeOefening(Oefening oefening, bool gebruikBoek)
         {
+            Console.Beep(2000, 100);
             var input = string.Empty;
             Console.Clear();
             DateTimeOffset startTime = default;
@@ -173,11 +174,6 @@ Woorden per minuut: {wpm}
             bool mustRender = true;
             while (true)
             {
-                var (voorbeeld, feedback, klaar) = OefeningRenderer.LiveFeedback(opdracht, input, gebruikBoek);
-
-                if (klaar)
-                    break;
-
                 if (consoleWidth != Console.WindowWidth || windowHeight != Console.WindowHeight)
                 {
                     consoleWidth = Console.WindowWidth;
@@ -187,8 +183,17 @@ Woorden per minuut: {wpm}
                 }
 
                 if (mustRender)
+                {
+                    var (voorbeeld, feedback, klaar) = OefeningRenderer.LiveFeedback(opdracht, input, gebruikBoek);
+
+                    if (klaar)
+                        break;
+
                     OefeningRenderer.Render(voorbeeld, feedback, consoleWidth, windowHeight).ToScreen();
                     mustRender = false;
+                    if (feedback.EndsWith("+"))
+                        Console.Beep(2000, 100);
+                }
 
                 if (!Console.KeyAvailable)
                 {
